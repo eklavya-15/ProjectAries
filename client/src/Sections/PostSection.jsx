@@ -10,7 +10,7 @@ import {
 import { Box, IconButton, Typography,  InputBase, Button } from "@mui/material";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setPost, setFriends } from "state";
+import { setPost, setFriends } from "../state";
 import { useNavigate } from "react-router-dom";
   import {
     FacebookShareButton,

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setPosts } from "state";
+import { setPosts } from "../state";
 import PostSection from "./PostSection";
 
 const PostsSection = ({ userId, isProfile = false }) => {

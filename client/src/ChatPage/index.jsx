@@ -8,7 +8,7 @@ import {
   Button,
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { setFriends } from "state";
+import { setFriends } from "../state";
 import { io } from "socket.io-client";
 import axios from "axios";
 

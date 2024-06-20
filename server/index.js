@@ -15,7 +15,6 @@ import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import { register } from "./controllers/auth.js";
 import { createPost } from "./controllers/posts.js";
-import { verifyToken } from "./middleware/auth.js";
 import aws  from 'aws-sdk';
 import multerS3 from 'multer-s3';
 import messageRoutes from "./routes/messages.js";

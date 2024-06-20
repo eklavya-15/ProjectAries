@@ -43,27 +43,26 @@ const UserWidget = ({ isProfile, userId, picturePath }) => {
   };
 
   const handleBio = async() =>{
-    fetch(`http://localhost:3002/users/${userId}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ bi}),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Error: ${response.status} - ${response.statusText}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        dispatch(setUser(data));
-      })
-      .catch((error) => {
-        console.error("Error updating user data:", error.message);
+    try {
+      const response = await fetch(`http://localhost:3002/users/${userId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ bi }),
       });
 
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      console.log(data);
+      setUser(data);
+    } catch (error) {
+      console.error("Error updating user data:", error.message);
+    }
     setEdit2(false);
     setBio("");
   }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFriends } from 'state';
+import { setFriends } from '../state';
 import { PersonAddOutlined, PersonRemoveOutlined } from '@mui/icons-material';
 import { Box, IconButton, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';

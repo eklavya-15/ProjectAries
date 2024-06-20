@@ -18,7 +18,7 @@ import {
 import Dropzone from "react-dropzone";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setPosts } from "state";
+import { setPosts } from "../state";
 
 const CreatePostSection = ({ picturePath }) => {
   const dispatch = useDispatch();

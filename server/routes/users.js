@@ -4,6 +4,7 @@ import {
   getUserFriends,
   getAllUsers,
   addRemoveFriend,
+  updateUser
 } from "../controllers/users.js";
 import jwt from "jsonwebtoken";
 
@@ -36,5 +37,6 @@ router.get("", verifyToken, getAllUsers);
 
 /* UPDATE */
 router.patch("/:id/:friendId", verifyToken, addRemoveFriend);
+router.patch("/:id", verifyToken, updateUser);
 
 export default router;
